@@ -2,17 +2,17 @@
 <widget name="Transferencia">
 	<Event syntacticType="aggregate" description="Información de las transferencias" fieldName="Transferencia" semanticType="http://www.centeropenmiddleware.com/ontology/Transferencia">
 		<Event syntacticType="aggregate" description="Cliente que realiza la transferencia" fieldName="Emisor" semanticType="http://www.centeropenmiddleware.com/ontology/Emisor">
-			<Event syntacticType="text" description="nombre del cliente" fieldName="Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name" />
-			<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
-			<Event syntacticType="text" description="dirección postal del cliente" fieldName="Dirección postal" semanticType="http://www.w3.org/2006/vcard/ns#Postal" />
-			<Event syntacticType="text" description="Email del cliente" fieldName="Email" semanticType="http://www.w3.org/2006/vcard/ns#Email" />
-			<Event syntacticType="text" description="Número de teléfono del cliente" fieldName="Teléfono" semanticType="http://www.w3.org/2006/vcard/ns#Tel" />
+			<Event syntacticType="text" description="nombre del cliente" fieldName="Emisor_Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name"/>
+			<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Emisor_Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta"/>
+			<Event syntacticType="text" description="dirección postal del cliente" fieldName="Emisor_DirecciónPostal" semanticType="http://www.w3.org/2006/vcard/ns#Postal"/>
+			<Event syntacticType="text" description="Email del cliente" fieldName="Emisor_Email" semanticType="http://www.w3.org/2006/vcard/ns#Email"/>
+			<Event syntacticType="text" description="Número de teléfono del cliente" fieldName="Emisor_Teléfono" semanticType="http://www.w3.org/2006/vcard/ns#Tel"/>
 		</Event>
 		<Event syntacticType="aggregate" description="Beneficiario de la transferencia" fieldName="Beneficiario" semanticType="http://www.centeropenmiddleware.com/ontology/Beneficiario">
-			<Event syntacticType="text" description="nombre del cliente" fieldName="Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name" />
-			<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+			<Event syntacticType="text" description="nombre del cliente" fieldName="Beneficiario_Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name"/>
+			<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Beneficiario_Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta"/>
 		</Event>
-		<Event syntacticType="text" description="Cantidad asociada a la transferencia" fieldName="Cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad" />
-		<Event syntacticType="text" description="Concepto de la transferencia" fieldName="Email" semanticType="http://www.centeropenmiddleware.com/ontology/Mensaje" />
+		<Event syntacticType="text" description="Cantidad asociada a la transferencia" fieldName="Cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad"/>
+		<Event syntacticType="text" description="Concepto descriptivo de la transferencia" fieldName="Concepto" semanticType="http://www.centeropenmiddleware.com/ontology/Mensaje"/>
 	</Event>
 </widget>

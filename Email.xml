@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <widget name="Email">
 	<Slot syntacticType="aggregate" description="an Email" fieldName="Email" semanticType="http://www.w3.org/2006/vcard/ns#email">
-		<Slot syntacticType="text" description="texto del asunto" fieldName="Asunto" semanticType="http://www.centeropenmiddleware.com/ontology/Asunto" />
-		<Slot syntacticType="text" description="texto del email" fieldName="Cuerpo" semanticType="http://www.centeropenmiddleware.com/ontology/Cuerpo" />
-		<Slot syntacticType="text" description="dirección del email" fieldName="Dirección" semanticType="http://www.centeropenmiddleware.com/ontology/Dirección_mail" />
+		<Slot syntacticType="text" description="texto del asunto" fieldName="Asunto" semanticType="http://www.centeropenmiddleware.com/ontology/Asunto"/>
+		<Slot syntacticType="text" description="texto del email" fieldName="Cuerpo" semanticType="http://www.centeropenmiddleware.com/ontology/Cuerpo"/>
+		<Slot syntacticType="text" description="dirección del email" fieldName="Dirección" semanticType="http://www.centeropenmiddleware.com/ontology/Dirección_mail"/>
 	</Slot>
 </widget>

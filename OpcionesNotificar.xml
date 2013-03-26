@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget name="OpcionesNotificar">
+	<Event syntacticType="aggregate" description="Opciones de notificación para el cliente" fieldName="Cliente" semanticType="http://www.centeropenmiddleware.com/ontology/Notificación">
+		<Event syntacticType="text" description="envío de SMS" fieldName="SMS" semanticType="http://www.centeropenmiddleware.com/ontology/SMS"/>
+		<Event syntacticType="text" description="envío de Email" fieldName="Email" semanticType="http://www.w3.org/2006/vcard/ns#email"/>
+		<Event syntacticType="text" description="Cliente que realiza la transferencia" fieldName="Emisor" semanticType="http://www.centeropenmiddleware.com/ontology/Emisor"/>
+		<Event syntacticType="text" description="Cantidad asociada a la transferencia" fieldName="Cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad"/>
+		<Event syntacticType="text" description="Beneficiario de la transferencia" fieldName="Beneficiario" semanticType="http://www.centeropenmiddleware.com/ontology/Beneficiario"/>
+	</Event>
+</widget>

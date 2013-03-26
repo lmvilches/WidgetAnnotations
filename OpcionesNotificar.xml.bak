@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget name="Notificar">
+<widget name="OpcionesNotificar">
 	<Event syntacticType="aggregate" description="Opciones de notificación para el cliente" fieldName="Cliente" semanticType="http://www.centeropenmiddleware.com/ontology/Notificación">
 		<Event syntacticType="text" description="envío de SMS" fieldName="SMS" semanticType="http://www.centeropenmiddleware.com/ontology/SMS" />
 		<Event syntacticType="text" description="envío de Email" fieldName="Email" semanticType="http://www.w3.org/2006/vcard/ns#email" />

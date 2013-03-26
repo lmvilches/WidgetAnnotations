@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <widget name="SMS">
 	<Slot syntacticType="aggregate" description="a SMS" fieldName="SMS" semanticType="http://www.centeropenmiddleware.com/ontology/SMS">
-		<Slot syntacticType="text" description="texto del SMS" fieldName="Texto" semanticType="http://www.centeropenmiddleware.com/ontology/Texto" />
-		<Slot syntacticType="text" description="número de teléfono" fieldName="numero" semanticType="http://www.centeropenmiddleware.com/ontology/Número_teléfono" />
+		<Slot syntacticType="text" description="texto del SMS" fieldName="Texto" semanticType="http://www.centeropenmiddleware.com/ontology/Texto"/>
+		<Slot syntacticType="text" description="número de teléfono" fieldName="numero" semanticType="http://www.centeropenmiddleware.com/ontology/Número_teléfono"/>
 	</Slot>
 </widget>
