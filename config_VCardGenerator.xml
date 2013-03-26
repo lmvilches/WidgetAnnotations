@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget name="Contactos">
+	<Event syntacticType="aggregate" description="an Vcard" fieldName="vCard" semanticType="http://www.w3.org/2006/vcard/ns#vCard">
+		<Event syntacticType="text" description="name with surname" fieldName="fullName" semanticType="http://www.w3.org/2006/vcard/ns#Name" />
+		<Event syntacticType="text" description="company name" fieldName="organization" semanticType="http://www.w3.org/2006/vcard/ns#Organization" />
+		<Event syntacticType="text" description="e-mail address" fieldName="e-mail" semanticType="http://www.w3.org/2006/vcard/ns#Email" />
+		<Event syntacticType="text" description="an telephone number" fieldName="telephone" semanticType="http://www.w3.org/2006/vcard/ns#Tel" />
+		<Event syntacticType="text" description="an address as a string" fieldName="address" semanticType="http://www.w3.org/2006/vcard/ns#Address" />
+		<Event syntacticType="text" description="a location with latitude and longitude" fieldName="location" semanticType="http://www.w3.org/2006/vcard/ns#Location" />
+	</Event>
+</widget>
