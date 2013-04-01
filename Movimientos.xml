@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget name="Email">
+	<Slot syntacticType="text" description="Número de cuenta" fieldName="Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+	<Slot syntacticType="aggregate" description="Notificación de movimiento" fieldName="Notificación de movimiento" semanticType="Notificación_de_movimiento">
+		<Slot syntacticType="text" description="tipo de movimiento realizado" fieldName="tipo_movimiento" semanticType="http://www.centeropenmiddleware.com/ontology/Tipo_Movimiento"/>
+		<Slot syntacticType="text" description="descripción introducida por el emisor" fieldName="concepto" semanticType="http://www.centeropenmiddleware.com/ontology/Descripción"/>
+		<Slot syntacticType="number" description="cuantía del movimiento" fieldName="cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad"/>
+		<Slot syntacticType="date" description="instante en que se realiza el movimiento" fieldName="fecha" semanticType="http://www.w3.org/2006/time#Instant"/>
+		<Slot syntacticType="text" description="Número de cuenta del emisor" fieldName="emisor" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+		<Slot syntacticType="text" description="Número de cuenta del beneficiario" fieldName="beneficiario" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+	</Slot>
+</widget>

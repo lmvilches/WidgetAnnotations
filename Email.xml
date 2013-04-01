@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <widget name="Email">
-	<Slot syntacticType="aggregate" description="an Email" fieldName="Email" semanticType="http://www.w3.org/2006/vcard/ns#email">
-		<Slot syntacticType="text" description="texto del asunto" fieldName="Asunto" semanticType="http://www.centeropenmiddleware.com/ontology/Asunto"/>
-		<Slot syntacticType="text" description="texto del email" fieldName="Cuerpo" semanticType="http://www.centeropenmiddleware.com/ontology/Cuerpo"/>
-		<Slot syntacticType="text" description="dirección del email" fieldName="Dirección" semanticType="http://www.centeropenmiddleware.com/ontology/Dirección_mail"/>
+	<Slot syntacticType="aggregate" description="a SMS" fieldName="SMS" semanticType="http://www.centeropenmiddleware.com/ontology/Notificación_de_movimiento">
+		<Slot syntacticType="text" description="tipo de movimiento realizado" fieldName="tipo_movimiento" semanticType="http://www.centeropenmiddleware.com/ontology/Tipo_Movimiento"/>
+		<Slot syntacticType="text" description="descripción introducida por el emisor" fieldName="concepto" semanticType="http://www.centeropenmiddleware.com/ontology/Descripción"/>
+		<Slot syntacticType="number" description="cantidad del movimiento" fieldName="cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad"/>
+		<Slot syntacticType="date" description="instante en que se realiza el movimiento" fieldName="fecha" semanticType="http://www.w3.org/2006/time#Instant"/>
 	</Slot>
+	<Slot syntacticType="text" description="número de teléfono" fieldName="numero" semanticType="http://www.w3.org/2006/vcard/ns#EMail"/>
 </widget>

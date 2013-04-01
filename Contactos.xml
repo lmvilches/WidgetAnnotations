@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget name="Cliente">
-	<Event syntacticType="aggregate" description="Datos asociados al cliente" fieldName="Cliente" semanticType="http://www.centeropenmiddleware.com/ontology/Contacto">
-		<Event syntacticType="text" description="nombre del cliente" fieldName="Cliente_Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name"/>
-		<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Cliente_Número_Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta"/>
-		<Event syntacticType="text" description="company name" fieldName="Cliente_organization" semanticType="http://www.w3.org/2006/vcard/ns#Organization"/>
-		<Event syntacticType="text" description="dirección postal del cliente" fieldName="Cliente_Dirección postal" semanticType="http://www.w3.org/2006/vcard/ns#Postal"/>
-		<Event syntacticType="text" description="Email del cliente" fieldName="Cliente_Email" semanticType="http://www.w3.org/2006/vcard/ns#Email"/>
+<widget name="Contactos">
+	<Event syntacticType="aggregate" description="Datos asociados al contacto" fieldName="contacto" semanticType="http://www.centeropenmiddleware.com/ontology/Contacto">
+		<Event syntacticType="text" description="nombre del cliente" fieldName="Nombre" semanticType="http://www.w3.org/2006/vcard/ns#Name"/>
+		<Event syntacticType="text" description="número de cuenta asociado al cliente" fieldName="Número_Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta"/>
+		<Event syntacticType="text" description="company name" fieldName="Organización" semanticType="http://www.w3.org/2006/vcard/ns#Organization"/>
+		<Event syntacticType="text" description="dirección postal del cliente" fieldName="Dirección postal" semanticType="http://www.w3.org/2006/vcard/ns#Postal"/>
+		<Event syntacticType="text" description="Email del cliente" fieldName="_Email" semanticType="http://www.w3.org/2006/vcard/ns#Email"/>
 		<Event syntacticType="text" description="Número de teléfono del cliente" fieldName="Cliente_Teléfono" semanticType="http://www.w3.org/2006/vcard/ns#Tel"/>
 		<Event syntacticType="text" description="a location with latitude and longitude" fieldName="Cliente_location" semanticType="http://www.w3.org/2006/vcard/ns#Location"/>
 	</Event>
