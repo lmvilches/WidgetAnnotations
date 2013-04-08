@@ -1,0 +1,1121 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.centeropenmiddleware.com/ontology/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://www.centeropenmiddleware.com/ontology/">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://www.w3.org/2006/vcard/ns</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Ontología asociada al escenario de wiring nueva banca online propuesto en el marco del proyecto &quot;Plataforma de Widgets&quot;, encuadrado dentro de la iniciativa Center for Open Middleware (COM) en la que colaboran la Universidad Politécnica de Madrid y el Grupo Santander</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Versión 0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Ahorro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Asunto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Beneficiario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Calendario_de_pagos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cantidad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cliente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Comprobante"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Confirmación"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Contacto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Corriente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Crédito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cuenta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cuerpo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Código_barras"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Código_confirmación"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Descripción"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Destino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Débito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Emisor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Estado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Externa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Ingreso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Internacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Mensaje"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Movimiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Notificación"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Notificación_de_movimiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Notificación_de_transferencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Número_de_cuenta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Origen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pago"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Posición"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Préstamo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Recarga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Retirada_de_efectivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tarjeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tipo_de_movimiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Titular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Transferencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Traspaso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VCardBank"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:Instant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="está_asociada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tipoMovimiento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#afecta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#envía"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#es_asociada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#está_compuesta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#realiza"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#solicita"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tiene"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tiene_asociada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tiene_titular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ingreso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="pago"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="retirada_de_efectivo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="transferencia"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Cliente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tiene_asociada"/>
+            <Class IRI="Cuenta"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Contacto"/>
+        <Class IRI="VCardBank"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Cuenta"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tiene_asociada"/>
+            <Class IRI="Movimiento"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Cuenta"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tiene_titular"/>
+            <Class IRI="Titular"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Transferencia"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tiene_asociada"/>
+            <Class IRI="Notificación"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Ahorro"/>
+        <Class IRI="Cuenta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Asunto"/>
+        <Class IRI="Mensaje"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Beneficiario"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Calendario_de_pagos"/>
+        <Class IRI="Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cantidad"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Comprobante"/>
+        <Class IRI="Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Confirmación"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Contacto"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Corriente"/>
+        <Class IRI="Cuenta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Crédito"/>
+        <Class IRI="Tarjeta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cuenta"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cuerpo"/>
+        <Class IRI="Mensaje"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Código_barras"/>
+        <Class IRI="Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Código_confirmación"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Descripción"/>
+        <Class IRI="Mensaje"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Destino"/>
+        <Class IRI="Transferencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Débito"/>
+        <Class IRI="Tarjeta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Emisor"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Estado"/>
+        <Class IRI="Cuenta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Externa"/>
+        <Class IRI="Transferencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ingreso"/>
+        <Class IRI="Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interna"/>
+        <Class IRI="Transferencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Internacional"/>
+        <Class IRI="Externa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Movimiento"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Movimiento"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="tipoMovimiento"/>
+            <Class IRI="Tipo_de_movimiento"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nacional"/>
+        <Class IRI="Externa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Notificación"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="está_asociada"/>
+            <Class IRI="Movimiento"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Notificación"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="está_asociada"/>
+            <Class abbreviatedIRI="time:Instant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Notificación_de_movimiento"/>
+        <Class IRI="Notificación"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Notificación_de_transferencia"/>
+        <Class IRI="Notificación"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Notificación_de_transferencia"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="está_asociada"/>
+            <Class IRI="Transferencia"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Número_de_cuenta"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Origen"/>
+        <Class IRI="Transferencia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Pago"/>
+        <Class IRI="Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Posición"/>
+        <Class IRI="Cuenta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Préstamo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Recarga"/>
+        <Class IRI="Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Retirada_de_efectivo"/>
+        <Class IRI="Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tipo_de_movimiento"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="tipoMovimiento"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="ingreso"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tipo_de_movimiento"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="tipoMovimiento"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="pago"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tipo_de_movimiento"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="tipoMovimiento"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="retirada_de_efectivo"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tipo_de_movimiento"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="tipoMovimiento"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="transferencia"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Titular"/>
+        <Class IRI="Cliente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Transferencia"/>
+        <Class IRI="Movimiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Traspaso"/>
+        <Class IRI="Interna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#VCard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="Número_de_cuenta"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Email"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Name"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Postal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VCardBank"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Tel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Débito"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#realiza"/>
+            <Class IRI="Traspaso"/>
+        </ObjectSomeValuesFrom>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Externa"/>
+        <Class IRI="Interna"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="Ingreso"/>
+        <NamedIndividual IRI="ingreso"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Tipo_de_movimiento"/>
+        <NamedIndividual IRI="ingreso"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Pago"/>
+        <NamedIndividual IRI="pago"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Tipo_de_movimiento"/>
+        <NamedIndividual IRI="pago"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Retirada_de_efectivo"/>
+        <NamedIndividual IRI="retirada_de_efectivo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Tipo_de_movimiento"/>
+        <NamedIndividual IRI="retirada_de_efectivo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Tipo_de_movimiento"/>
+        <NamedIndividual IRI="transferencia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Transferencia"/>
+        <NamedIndividual IRI="transferencia"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#envía"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tiene"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <ObjectProperty IRI="#tiene"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tiene_titular"/>
+        <ObjectProperty IRI="#tiene"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="está_asociada"/>
+        <ObjectProperty IRI="#tiene_asociada"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tiene_titular"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPart"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#partOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="está_asociada"/>
+        <Class IRI="Cuenta"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="está_asociada"/>
+        <Class IRI="Notificación"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#afecta"/>
+        <Class IRI="Movimiento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#envía"/>
+        <Class IRI="Notificación"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_asociada"/>
+        <Class IRI="Movimiento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_asociada"/>
+        <Class IRI="Tarjeta"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#está_compuesta"/>
+        <Class IRI="Notificación"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#realiza"/>
+        <ObjectUnionOf>
+            <Class IRI="Cuenta"/>
+            <Class IRI="Tarjeta"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#solicita"/>
+        <Class IRI="Cliente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene"/>
+        <Class IRI="Cuenta"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Cliente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Préstamo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Transferencia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene_titular"/>
+        <Class IRI="Cuenta"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="está_asociada"/>
+        <Class IRI="Cliente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#afecta"/>
+        <Class IRI="Posición"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#envía"/>
+        <Class IRI="SMS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#envía"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Email"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_asociada"/>
+        <Class IRI="Cuenta"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#está_compuesta"/>
+        <Class IRI="Código_confirmación"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#realiza"/>
+        <Class IRI="Movimiento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#solicita"/>
+        <Class IRI="Préstamo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene"/>
+        <Class IRI="Posición"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Beneficiario"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Cuenta"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Destino"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Origen"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_asociada"/>
+        <Class IRI="Tarjeta"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_titular"/>
+        <Class IRI="Titular"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Ahorro</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta de ahorro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Asunto</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Asunto del mensaje</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Asunto</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Asunto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Beneficiario</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Beneficiario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Calendario_de_pagos</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Calendario de pagos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cantidad</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cantidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cliente</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cliente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Comprobante</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Comprobante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Confirmación</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Confirmación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Contacto</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Contacto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Corriente</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta corriente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Crédito</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Tarjeta de crédito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cuenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Cuerpo</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuerpo del mensaje</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cuerpo</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuerpo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Código_barras</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Código de barras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Código_confirmación</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Código de confirmación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Descripción</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Descripción del mensaje</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Descripción</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Descripción</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Destino</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Destino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Débito</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Tarjeta de débito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Emisor</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Emisor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Estado</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Estado actual de la cuenta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Estado</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Externa</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia cuya cantidad asociada se realiza a una cuenta externa a la entidad bancaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Externa</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia externa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Ingreso</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Ingreso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Interna</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia cuya cantidad asociada se realiza a una cuenta interna a la entidad bancaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Interna</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia interna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Internacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia externa internacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Mensaje</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Mensaje</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Movimiento</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Movimiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Nacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia externa nacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Notificación</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Notificación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Notificación_de_movimiento</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Notificación de movimiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Notificación_de_transferencia</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Notificación de transferencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Número_de_cuenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Número de cuenta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Origen</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Origen de la transferencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Pago</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Pago</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Posición</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Posición global</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Préstamo</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Préstamo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Recarga</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Recarga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Retirada_de_efectivo</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Retirada de efectivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SMS</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">SMS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Tarjeta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Tarjeta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Tipo_de_movimiento</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Tipo de movimiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Titular</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cliente titular</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Transferencia</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Traspaso</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Traspaso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ahorro</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta de ahorro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Beneficiario</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Beneficiario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Calendario</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Calendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cliente</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cliente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Comprobante</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Comprobante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Corriente</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta corriente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cuenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cuenta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Código_barras</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Código de barras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Estado</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Externa</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia a cuentas externas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Externa</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia externa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ingreso</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Ingreso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interna</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia a cuentas internas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interna</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia interna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Internacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia a cuentas internacionales</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Internacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia internacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Movimiento</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Movimiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia a cuentas nacionales externas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nacional</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia nacional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Número_de_cuenta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Número de cuenta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pago</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Pago</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Recarga</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Recarga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Retirada_efectivo</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Retirada de efectivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tarjeta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Tarjeta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Titular</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Titular</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Transferencia</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Traspaso</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Traspaso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#está_compuesta</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">está compuesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>time:Instant</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Instant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>time:Instant</AbbreviatedIRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Instante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Address</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Dirección</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Name</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Nombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Tel</IRI>
+        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Teléfono</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
