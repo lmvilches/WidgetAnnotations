@@ -89,9 +89,6 @@
         <Class IRI="Emisor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Estado"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Externa"/>
     </Declaration>
     <Declaration>
@@ -131,9 +128,6 @@
         <Class IRI="Pago"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Posición"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Préstamo"/>
     </Declaration>
     <Declaration>
@@ -164,7 +158,13 @@
         <Class abbreviatedIRI="time:Instant"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="identifica"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="tieneTipo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tiene_identificador"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#afecta"/>
@@ -208,9 +208,19 @@
     <Declaration>
         <NamedIndividual IRI="transferencia"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="usuario_activo"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Contacto"/>
         <Class IRI="VCardBank"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Cuenta"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="tiene_identificador"/>
+            <Class IRI="Número_de_cuenta"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Cuenta"/>
@@ -304,10 +314,6 @@
         <Class abbreviatedIRI=":Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Estado"/>
-        <Class IRI="Cuenta"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="Externa"/>
         <Class IRI="Transferencia"/>
     </SubClassOf>
@@ -350,10 +356,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Notificación_de_transferencia"/>
-        <Class IRI="Notificación"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="Número_de_cuenta"/>
         <Class abbreviatedIRI=":Thing"/>
     </SubClassOf>
@@ -364,10 +366,6 @@
     <SubClassOf>
         <Class IRI="Pago"/>
         <Class IRI="Movimiento"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Posición"/>
-        <Class IRI="Cuenta"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Préstamo"/>
@@ -470,6 +468,16 @@
         <Class IRI="Tipo_de_movimiento"/>
         <NamedIndividual IRI="transferencia"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Cliente"/>
+        <NamedIndividual IRI="usuario_activo"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="ingreso"/>
+        <NamedIndividual IRI="pago"/>
+        <NamedIndividual IRI="retirada_de_efectivo"/>
+        <NamedIndividual IRI="transferencia"/>
+    </DifferentIndividuals>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#envía"/>
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
@@ -487,12 +495,22 @@
         <ObjectProperty IRI="#tiene"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="identifica"/>
+        <ObjectProperty IRI="tiene_identificador"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasPart"/>
         <ObjectProperty IRI="#partOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="tiene_identificador"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#tiene_titular"/>
     </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="tiene_identificador"/>
+    </InverseFunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasPart"/>
     </TransitiveObjectProperty>
@@ -539,10 +557,6 @@
         <Class IRI="Cuenta"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#afecta"/>
-        <Class IRI="Posición"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#envía"/>
         <Class IRI="SMS"/>
     </ObjectPropertyRange>
@@ -565,10 +579,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#solicita"/>
         <Class IRI="Préstamo"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#tiene"/>
-        <Class IRI="Posición"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#tiene_titular"/>
@@ -686,16 +696,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Estado</IRI>
-        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Estado actual de la cuenta</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Estado</IRI>
-        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Estado</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Externa</IRI>
         <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Transferencia cuya cantidad asociada se realiza a una cuenta externa a la entidad bancaria</Literal>
     </AnnotationAssertion>
@@ -768,11 +768,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Pago</IRI>
         <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Pago</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Posición</IRI>
-        <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Posición global</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

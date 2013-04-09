@@ -1,4 +1,4 @@
 ﻿?<?xml version="1.0" encoding="UTF-8"?>
 <widget name="Cuentas">
-	<Event syntacticType="text" description="Número de cuenta" fieldName="Cuenta" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+	<Event syntacticType="text" description="Número de cuenta" fieldName="Cuenta" semanticType="Número_de_cuenta and identifica some (Cuenta and tiene_titular only {usuario_activo})" />
 </widget>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <widget name="Transferencia">
-	<Slot syntacticType="text" description="Número de cuenta del emisor" fieldName="emisor" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
+	<Slot syntacticType="text" description="Número de cuenta del emisor" fieldName="emisor" semanticType="Número_de_cuenta and identifica some (Cuenta and tiene_titular only {usuario_activo})" />
 	<Slot syntacticType="text" description="Número de cuenta del beneficiario" fieldName="beneficiario" semanticType="http://www.centeropenmiddleware.com/ontology/Número_de_cuenta" />
-	<Event syntacticType="aggregate" description="Notificación de transferencia" fieldName="Notificación de transferencia" semanticType="Notificación_de_movimiento and tipoMovimiento some Transferencia">
+	<Event syntacticType="aggregate" description="Notificación de transferencia" fieldName="Notificación de transferencia" semanticType="Notificación_de_movimiento and tieneTipo only {transferencia}">
 		<Event syntacticType="text" description="tipo de movimiento realizado" fieldName="tipo_movimiento" semanticType="http://www.centeropenmiddleware.com/ontology/Tipo_Movimiento"/>
 		<Event syntacticType="text" description="descripción introducida por el emisor" fieldName="concepto" semanticType="http://www.centeropenmiddleware.com/ontology/Descripción"/>
 		<Event syntacticType="number" description="cuantía del movimiento" fieldName="cantidad" semanticType="http://www.centeropenmiddleware.com/ontology/Cantidad"/>
